@@ -938,7 +938,7 @@ textarea{
 
 
         #hero-section{
-            flex-direction: column-reverse;
+            flex-direction: column;
             padding: 5rem 10vw;
             gap: 5rem;
             
