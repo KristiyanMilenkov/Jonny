@@ -7,6 +7,37 @@
 :root{
 
     /* color variables */
+
+    --accent-color: #000;
+    --lighter-accent-color: #000;
+    --primary-text-color: #D4AF37;
+    --secondary-text-color: #000;
+    --primary-color: #ea0808;
+    --overlay-color: rgba(0, 0, 0, 0.2);
+    --hero-img-gradients: linear-gradient(213.55deg, #ff8a8a 11.56%, rgba(110, 174, 228, 0) 63.58%);
+    --background-diagonal-gradients: linear-gradient(238.86deg, #e46e6e 14.38%, rgba(110, 174, 228, 0) 75.41%);
+    --background-gradients: linear-gradient(180deg, #e46e6e 14.38%, rgba(110, 174, 228, 0) 75.41%);
+    --white-color: #000;
+    --shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;
+    color: var(--primary-text-color);
+    --text-stay-primary: #000;
+    --white-to-black: #000;
+    --faq-bg-color: #D4AF37FF;
+    background: #000;
+
+
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+body.dark{
     --accent-color: #f0f9ff;
     --lighter-accent-color: #F2F9FF;
     --primary-text-color: #000;
@@ -18,12 +49,15 @@
     --background-gradients: linear-gradient(180deg, #6EAEE4 14.38%, rgba(110, 174, 228, 0) 75.41%);
     --white-color: #fff;
     --shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-
-}
-
-html{
-    font-size: 16px;
-    scroll-behavior: smooth;
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    --text-stay-primary: #000;
+    --white-to-black: #f0f9ff;
+    --faq-bg-color: #f0f9ff;
+    background: #ffffff;
 }
 
 body {
@@ -44,7 +78,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
+    background: var(--accent-color);
 }
 .nav-toggler{
     display: none;
@@ -170,7 +204,17 @@ body {
     z-index: 2;
     background: var(--background-diagonal-gradients);
 }
-.hero-img-qr-code,
+.hero-img-qr-code{
+    position: absolute;
+    padding: 1rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 10%;
+    background: var(--secondary-text-color);
+    box-shadow: 0 2rem 2rem var(--shadow);
+    z-index: 3;
+    border: .1rem solid var(--faq-bg-color);
+}
 .about-img-social-link,
 .contact-image-social-link{
     position: absolute;
@@ -193,8 +237,8 @@ body {
 }
 
 .hero-img-qr-code{
-    top: 17%;
-    right: 15%;
+    top: 3%;
+    right: 5%;
     transform: scale(0.75);
 
 }
@@ -208,8 +252,29 @@ body {
     box-shadow: 0 0.5rem 4rem var(--shadow);
     z-index: 3;
     border-radius: .5rem;
+    border: .1rem solid var(--faq-bg-color);
 }
-
+.laden{
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    width: 8rem;
+    height: 4rem;
+    padding: 1rem 1.5rem;
+    background: var(--white-color);
+    box-shadow: 0 0.5rem 4rem var(--shadow);
+    z-index: 4;
+    border-radius: .5rem;
+    border: .1rem solid var(--faq-bg-color);
+}
+.laden h1{
+    font-size: .9rem;
+    font-weight: 300;
+}
+.laden p{
+    font-size: .7rem;
+    margin-top: .25rem;
+}
 .customers h1{
     font-weight: 400;
 }
@@ -230,6 +295,7 @@ body {
     z-index: 3;
     display: flex;
     gap: 1.5rem;
+    border: .1rem solid var(--faq-bg-color);
 }
 
 .hero-review i{
@@ -283,6 +349,7 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background: var(--white-to-black);
 }
 
 /* about section */
@@ -292,6 +359,7 @@ section{
     justify-content: center;
     align-items: center;
     gap: 8rem;
+
 }
 
 .about-us-img-container{
@@ -372,7 +440,7 @@ section{
     width: 100%;
     height: 5rem;
     margin-bottom: 2rem;
-    border: .1rem solid var(--accent-color);
+    border: .1rem solid var(--faq-bg-color);
     border-radius: .5rem;
     display: flex;
     gap: 1.5rem;
@@ -416,7 +484,7 @@ section{
 }
 
 .service-card{
-    border: .1rem solid var(--accent-color);
+    border: .1rem solid var(--faq-bg-color);
     border-radius: .25rem;
     padding: 1.5rem;
     transition: .25s ease;
@@ -484,15 +552,17 @@ section{
 
 #faq-section .section-title{
     margin-bottom: 5rem;
+
 }
 
 .faq{
     width: 100%;
     border-radius: .25rem;
-    border: .1rem solid var(--accent-color);
+    border: .1rem solid var(--faq-bg-color);
     position: relative;
     margin-bottom: 2rem;
     transition: .25s ease;
+
 }
 
 .question-box{
@@ -501,6 +571,7 @@ section{
     align-items: center;
     padding: 1rem;
     cursor: pointer;
+    background: var(--accent-color);
 }
 
 .question{
@@ -638,10 +709,11 @@ textarea{
     resize: none;
     height: 20rem;
     font-weight: 300;
+
 }
 
 ::placeholder{
-    color: var(--primary-text-color);
+    color: var(--text-stay-primary);
     opacity: .5;
 }
 
@@ -652,6 +724,7 @@ textarea{
     display: flex;
     justify-content: space-between;
     gap: 4rem;
+    background: var(--accent-color);
 }
 
 
@@ -724,6 +797,10 @@ textarea{
    html{
        font-size: 16px;
    }
+    .laden{
+        top: 21%;
+        right: 5%;
+    }
 }
 
 
@@ -765,6 +842,10 @@ textarea{
     html{
         font-size: 13px;
     }
+    .laden{
+        top: 25%;
+        right: 5%;
+    }
 
     #hero-section{
         overflow: hidden;
@@ -796,12 +877,13 @@ textarea{
     }
 
     .hero-img{
-        height: 110rem;
+        height: 40rem;
+
     }
 
     .customers{
-        top: 10%;
-        left: 10%;
+        top: 12%;
+        left: 1%;
         transform: scale(0.8);
     }
 
@@ -817,8 +899,8 @@ textarea{
     }
 
     .hero-img-qr-code{
-        top: 5%;
-        right: 20%;
+        top: 13%;
+        right: 5%;
     }
 
     #about-section{
@@ -927,7 +1009,7 @@ textarea{
             width: 100%;
             margin: auto;
             transition: .25s;
-            padding: 1.2 rem 10vw;
+            padding: 1.2rem 10vw;
         }
 
         .links-container .links:hover{
@@ -968,6 +1050,14 @@ textarea{
             top: 10%;
             left: 0%;
             transform: scale(1);
+        }
+        .laden{
+            top: 20%;
+            right: 5%;
+        }
+        .hero-img-qr-code{
+            top: 2%;
+            right: 5%;
         }
 
         .brands-container{
