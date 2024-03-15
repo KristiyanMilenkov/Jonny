@@ -18,3 +18,4 @@ faqs.map(faq => {
 })
 
 AOS.init();
+
