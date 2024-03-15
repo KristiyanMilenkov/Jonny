@@ -694,7 +694,6 @@ textarea{
     text-decoration: none;
     margin-bottom: .5rem;
     display: block;
-    text-transform: capitalize;
 }
 
 .footer-text{
@@ -797,7 +796,7 @@ textarea{
     }
 
     .hero-img{
-        height: 110;
+        height: 110rem;
     }
 
     .customers{
