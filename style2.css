@@ -1,0 +1,61 @@
+*{
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+:root{
+
+    /* color variables */
+
+    --accent-color: #000;
+    --lighter-accent-color: #000;
+    --primary-text-color: #D4AF37;
+    --secondary-text-color: #000;
+    --primary-color: #ea0808;
+    --overlay-color: rgba(0, 0, 0, 0.2);
+    --hero-img-gradients: linear-gradient(213.55deg, #ff8a8a 11.56%, rgba(110, 174, 228, 0) 63.58%);
+    --background-diagonal-gradients: linear-gradient(238.86deg, #e46e6e 14.38%, rgba(110, 174, 228, 0) 75.41%);
+    --background-gradients: linear-gradient(180deg, #e46e6e 14.38%, rgba(110, 174, 228, 0) 75.41%);
+    --white-color: #000;
+    --shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;
+    color: var(--primary-text-color);
+    --text-stay-primary: #000;
+    --white-to-black: #000;
+    --faq-bg-color: #D4AF37FF;
+    background: #000;
+
+
+}
+
+body {
+    color: var(--primary-text-color);
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+}

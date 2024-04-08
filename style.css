@@ -66,6 +66,17 @@ body {
   font-weight: 300;
   overflow-x: hidden;
 }
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 .navbar{
     position: fixed;
@@ -778,6 +789,8 @@ textarea{
 }
 
 
+
+
 /* media queries */
 
 @media (min-width: 1440px){
@@ -1092,6 +1105,7 @@ textarea{
             margin-bottom: 0;
         }
 
+
 }
 
 
@@ -1114,6 +1128,12 @@ textarea{
 
     .services-container{
         grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+        }
     }
 
 
