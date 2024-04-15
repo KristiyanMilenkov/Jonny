@@ -28,6 +28,7 @@
     --text-stay-primary: #000;
     --white-to-black: #000;
     --faq-bg-color: #D4AF37FF;
+    --banner-collor: #D4AF37;
     background: #000;
 
 
@@ -57,6 +58,7 @@ body.dark{
     --text-stay-primary: #000;
     --white-to-black: #f0f9ff;
     --faq-bg-color: #f0f9ff;
+    --banner-collor: #000;
     background: #ffffff;
 }
 
@@ -77,10 +79,43 @@ body {
     display: table;
     clear: both;
 }
+.text-wrapper{
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    background: var(--accent-color);
+    overflow: hidden;
+    z-index: 9;
+
+}
+
+h4{
+    font-size: 1.42rem;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--primary-text-color);
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: move-rtl 6000ms linear infinite;
+    text-decoration: none;
+}
+.link-partner:visited{
+    text-decoration: none;
+    color: var(--banner-collor);
+}
+
+@keyframes move-rtl {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 .navbar{
     position: fixed;
-    top: 0;
+    top: 3%;
     left: 0;
     z-index: 9;
     width: 100%;
@@ -248,7 +283,7 @@ body {
 }
 
 .hero-img-qr-code{
-    top: 3%;
+    top: 5%;
     right: 5%;
     transform: scale(0.75);
 
@@ -1039,6 +1074,7 @@ textarea{
         }
 
         .hero-info{
+            top: 3rem;
             width: 80%;
             text-align: center;
         }
@@ -1055,7 +1091,7 @@ textarea{
         }
 
         .hero-review{
-            bottom: 0;
+            bottom: 5rem;
             right: 10%;
         }
 
